@@ -1,1 +1,54 @@
-/home/ft/workspace/intellij-utils/_gitignore
+######## ########################
+##
+##	thx to Gary Rowe
+##	http://goo.gl/y4dZq
+#### #####################
+
+#### ############
+##
+##	System (linux)
+#### ########
+*~
+.svn/
+*.key
+
+#### ############
+##
+##	System (osx)
+#### ########
+.DS_Store
+
+#### ############
+##
+##	Eclipse
+#### ########
+.classpath
+.project
+.settings/
+
+#### ############
+##
+##	Intellij
+#### ########
+.idea/
+*.iml
+*.iws
+
+#### ############
+##
+##	Maven
+#### ########
+log/
+target/
+
+#### ############
+##
+##	Java
+#### ########
+*.class
+
+#### ############
+##
+##	Other
+#### ########
+*.log
