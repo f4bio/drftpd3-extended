@@ -13,13 +13,11 @@ updated libs [drftpd3/lib/]
 * truezip/truezip-*.jar [ 7.4.3 -> 7.7.4 ]
 * findbugs-annotations-*.jar [ 1.3.9 -> 2.0.2 ]
 
-
 added/complied libs [drftpd3/lib/]
 ==================================
 * wrapper[32|64].jar [ ia32/x64 - 3.5.21 ]
 * libwrapper[32|64].so [ ia32/x64 - 3.5.21 ]
 * libTerminal[32|64].so [ ia32/x64 - 1.1.4 ]
-
 
 added/complied bins [drftpd3/bin/]
 ==================================	
@@ -56,6 +54,5 @@ sources / thanks
 	* http://www.pitman.co.za/
 * Tanuk
 	* http://wrapper.tanukisoftware.com/
-
 
 more too come...
