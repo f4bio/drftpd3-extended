@@ -1,4 +1,4 @@
-drftpd3 (extended)
+* drftpd3 (extended)
 	* libs updated
 	* linux x64 libs/bins added
 	* few paths om xmls updazed
