@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<!-- $Id: plugin.xml 2082 2010-09-20 18:27:50Z cyber1331 $ -->
+<plugin id="org.drftpd.commands.serverstatus" version="3.0.0">
+	<doc>
+		<doc-text>This plugin provides Server Status Commands.  
+(SITE MASTERUPTIME/SLAVEUPTIME/SLAVESUPTIME/STATUS)</doc-text>
+	</doc>
+	<attributes>
+		<attribute id="DefaultBuild" value="true" />
+	</attributes>
+	<requires>
+		<import plugin-id="org.drftpd.commandmanager" exported="true" />
+		<import plugin-id="org.drftpd.slaveselection.filter" exported="true" />
+	</requires>
+	<runtime>
+		<library id="org.drftpd.commands.serverstatus" path="classes/" type="code">
+			<export prefix="*" />
+		</library>
+	</runtime>
+	<extension-point id="PreHook" parent-plugin-id="org.drftpd.commandmanager" parent-point-id="CommandPreHook" />
+	<extension-point id="PostHook" parent-plugin-id="org.drftpd.commandmanager" parent-point-id="CommandPostHook" />
+
+	<extension plugin-id="org.drftpd.commandmanager" point-id="Command" id="ServerStatusHandler" />
+</plugin>

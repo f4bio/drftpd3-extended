@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml 2102 2010-09-25 12:54:20Z scitz0 $ -->
+<project name="org.drftpd.commands.find"
+         default="build">
+	<property name="plugin.family" value="plugins/master" />
+	<target name="build">
+		<buildplugin />
+	</target>
+	<target name="clean">
+		<cleanplugin />
+	</target>
+</project>

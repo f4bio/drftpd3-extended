@@ -1,0 +1,8 @@
+# $Id: log4j-master.properties.dist 2279 2010-11-10 02:01:52Z cyber1331 $
+log4j.logger.org.drftpd.plugins.jobmanager=DEBUG, jobmanager
+log4j.additivity.org.drftpd.plugins.jobmanager=false
+
+log4j.appender.jobmanager=org.apache.log4j.FileAppender
+log4j.appender.jobmanager.File=logs/jobmanager.log
+log4j.appender.jobmanager.layout=org.apache.log4j.PatternLayout
+log4j.appender.jobmanager.layout.ConversionPattern=%p %d{dd MMM yyyy HH:mm:ss} [%t] %c %x - %m%n

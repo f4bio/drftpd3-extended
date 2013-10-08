@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<!-- $Id: plugin.xml 2082 2010-09-20 18:27:50Z cyber1331 $ -->
+<plugin id="org.drftpd.protocol.zipscript.master" version="3.0.0">
+	<doc>
+		<doc-text>(Zipscript) - This plugin provides Protocol Extensions for Zipscript on the Master Side</doc-text>
+	</doc>
+
+	<attributes>
+		<attribute id="ProtocolName" value="ZipscriptProtocol"/>
+		<attribute id="ImplicitDependencies">
+			<attribute id="Dependency1" value="org.drftpd.protocol.zipscript.slave" />
+		</attribute>
+		<attribute id="DenyUnload" value="true" />
+	</attributes>
+	
+	<requires>
+		<import plugin-id="org.drftpd.protocol.zipscript.common" exported="true" />
+		<import plugin-id="master" exported="true" reverse-lookup="true" />
+	</requires>
+	<runtime>
+		<library id="org.drftpd.protocol.zipscript.master" path="classes/" type="code">
+			<export prefix="*" />
+		</library>
+	</runtime>
+
+	<extension plugin-id="master" point-id="ProtocolExtension" id="ZipscriptProtocol">
+		<parameter id="IssuerClass" value="org.drftpd.protocol.zipscript.master.ZipscriptIssuer" />
+	</extension>
+</plugin>

@@ -1,0 +1,5 @@
+# $Id: zipscript.conf.dist 2023 2010-02-13 16:31:27Z djb61 $
+
+# Maximum number of users/groups to include in race complete announce
+irc.zip.maxusers=10
+irc.zip.maxgroups=10

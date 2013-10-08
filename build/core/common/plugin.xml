@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<!-- $Id: plugin.xml 2461 2011-06-11 20:22:15Z djb61 $ -->
+<plugin id="common" version="3.0.0">
+	<doc>
+		<doc-text>(Required) - These are the common resources between the master and slave.</doc-text>
+	</doc>	
+	<attributes>
+		<attribute id="DenyUnload" value="true" />
+		<attribute id="DefaultBuild" value="true" />
+		<attribute id="MustBuild" value="true" />
+		<attribute id="Native">
+			<attribute id="Native1" value="lib/libwrapper.so">
+				<attribute id="Executable" value="false" />
+			</attribute>
+			<attribute id="Native2" value="lib/wrapper.dll">
+				<attribute id="Executable" value="false" />
+			</attribute>
+			<attribute id="Native3" value="lib/wrapper.jar">
+				<attribute id="Executable" value="false" />
+			</attribute>
+			<attribute id="Native4" value="bin/wrapper">
+				<attribute id="Executable" value="true" />
+			</attribute>
+			<attribute id="Native5" value="bin/wrapper.exe">
+				<attribute id="Executable" value="false" />
+			</attribute>
+		</attribute>
+	</attributes>
+	<runtime>
+		<library id="common" path="classes/" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="junit" path="../../../lib/junit-4.11.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="log4j" path="../../../lib/log4j-1.2.16.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="oro" path="../../../lib/jakarta-oro-2.0.8.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="commons-logging" path="../../../lib/commons-logging-1.1.1.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="jpf" path="../../../lib/jpf-1.5.1.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="jpf-boot" path="../../../lib/jpf-boot-1.5.1.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="drftpd-jpf" path="../../../lib/drftpd-jpf-3.0.0.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="commons-lang" path="../../../lib/commons-lang-2.6.jar" type="code">
+			<export prefix="*" />
+		</library>
+	</runtime>
+</plugin>

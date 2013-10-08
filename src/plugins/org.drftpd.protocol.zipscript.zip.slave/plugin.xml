@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<!-- $Id: plugin.xml 2525 2012-03-31 14:43:09Z cyber1331 $ -->
+<plugin id="org.drftpd.protocol.zipscript.zip.slave" version="3.0.0">
+	<doc>
+		<doc-text>(Zipscript) - This plugin provides Protocol Extensions for Zipscript (.zip/DIZ) on the Slave Side</doc-text>
+	</doc>
+
+	<attributes>
+		<attribute id="ProtocolName" value="ZipscriptZipProtocol"/>
+		<attribute id="ImplicitDependencies">
+			<attribute id="Dependency1" value="org.drftpd.commands.zipscript.zip" />
+		</attribute>
+	</attributes>
+	
+	<requires>
+		<import plugin-id="org.drftpd.protocol.zipscript.zip.common" />
+		<import plugin-id="slave" reverse-lookup="true" />
+	</requires>
+	<runtime>
+		<library id="org.drftpd.protocol.zipscript.zip.slave" path="classes/" type="code" />
+		<library id="findbugs-annotations" path="../../../lib/annotations-2.0.2.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="commons-compress" path="../../../lib/commons-compress-1.5.jar" type="code">
+			<export prefix="*" />
+		</library>		
+		<library id="truezip-file" path="../../../lib/truezips/truezip-file-7.7.4.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="truezip-kernel" path="../../../lib/truezips/truezip-kernel-7.7.4.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="truezip-driver-file" path="../../../lib/truezips/truezip-driver-file-7.7.4.jar" type="code">
+			<export prefix="*" />
+		</library>
+		<library id="truezip-driver-zip" path="../../../lib/truezips/truezip-driver-zip-7.7.4.jar" type="code">
+			<export prefix="*" />
+		</library>	
+		<library id="truezip-swing" path="../../../lib/truezips/truezip-swing-7.7.4.jar" type="code">
+   			<export prefix="*" />
+		</library>   
+	</runtime>
+			
+	<extension plugin-id="slave" point-id="Handler" id="ZipCRCHandler">
+		<parameter id="Name" value="zipcrc" />
+		<parameter id="Class" value="org.drftpd.protocol.zipscript.zip.slave.ZipscriptZipHandler" />
+		<parameter id="Method" value="handleZipCRC" />
+	</extension>
+	<extension plugin-id="slave" point-id="Handler" id="ZipDizInfoHandler">
+		<parameter id="Name" value="zipdiz" />
+		<parameter id="Class" value="org.drftpd.protocol.zipscript.zip.slave.ZipscriptZipHandler" />
+		<parameter id="Method" value="handleZipDizInfo" />
+	</extension>
+</plugin>

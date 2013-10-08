@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<!-- $Id: plugin.xml 2082 2010-09-20 18:27:50Z cyber1331 $ -->
+<plugin id="org.drftpd.usermanager.javabeans" version="3.0.0">
+	<doc>
+		<doc-text>(Required) - This plugin provides the JaveBeans User Manager</doc-text>
+	</doc>
+	<attributes>
+		<attribute id="DefaultBuild" value="true" />
+		<attribute id="MustBuild" value="true" />
+	</attributes>
+	<requires>
+		<import plugin-id="master"/>
+	</requires>
+	<runtime>
+		<library id="org.drftpd.usermanager.javabeans" path="classes/" type="code">
+				<export prefix="*" />
+		</library>
+	</runtime>
+	<extension plugin-id="master" point-id="UserManager" id="BeanUserManager">
+		<parameter id="Class" value="org.drftpd.usermanager.javabeans.BeanUserManager" />
+	</extension>
+</plugin>

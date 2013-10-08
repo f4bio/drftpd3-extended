@@ -1,0 +1,5 @@
+# $Id: zipscript.conf.dist 1925 2009-06-15 21:46:05Z tdsoul $
+
+#enable MP3 info [true/false]
+cwd.mp3info.enabled=true
+stor.mp3info.enabled=true
