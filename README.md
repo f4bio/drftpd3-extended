@@ -1,9 +1,11 @@
-* drftpd3 (extended)
-	* libs updated
-	* linux x64 libs/bins added
-	* few paths om xmls updazed
 
-updated libs [drftpd3/lib/]
+overview
+========
+* libs updated
+* linux x64 libs/bins added
+* paths in xmls updated
+
+updated libs [lib/]
 ===========================
 * ant-*.jar [ 1.8.4 -> 1.9.2 ]
 * commons-compress-*.jar [ 1.3 -> 1.5 ]
@@ -13,13 +15,13 @@ updated libs [drftpd3/lib/]
 * truezip/truezip-*.jar [ 7.4.3 -> 7.7.4 ]
 * findbugs-annotations-*.jar [ 1.3.9 -> 2.0.2 ]
 
-added/complied libs [drftpd3/lib/]
+added/complied libs [lib/]
 ==================================
 * wrapper[32|64].jar [ ia32/x64 - 3.5.21 ]
 * libwrapper[32|64].so [ ia32/x64 - 3.5.21 ]
 * libTerminal[32|64].so [ ia32/x64 - 1.1.4 ]
 
-added/complied bins [drftpd3/bin/]
+added/complied bins [bin/]
 ==================================	
 * wrapper[32|64] [ ia32/x64 - 3.5.21 ]
 
@@ -27,7 +29,12 @@ notes
 =====
 * paths updated (in xml files)
 * all extensions selected by default
-* please link either ia32 or x64 lib/bin (like now)
+* please link either ia32 or x64 lib/bin (like it is now)
+	* e.g.:
+	* $ cd bin/
+	* $ ln -s wrappers/wrapper64 wrapper
+	* $ cd ../lib
+	* $ ln -s terminals/libTerminal64.so libTerminal.so
 
 tested
 ======
